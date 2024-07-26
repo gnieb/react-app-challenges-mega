@@ -1,5 +1,13 @@
 # React Challenges - in one mega app
 
+
+## Table of Contents / To Do
+- stop watch 
+- react router
+- react tests
+- contact form
+- 
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
