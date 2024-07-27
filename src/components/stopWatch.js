@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-export const stopWatch = () => {
+export const StopWatch = () => {
 
     const [time, setTime] = useState(0);
 
@@ -15,12 +15,15 @@ export const stopWatch = () => {
     const stopTimer = () => {
         setTime((time) => clearInterval())
     }
+    return (
 
-    <div>
+       <div>
         <div onClick={startTimer}>START</div>
         <div onClick={stopTimer} >STOP</div>
         <div>`${time / 60} minutes`</div>
         <div>`{time} seconds`</div>
-    </div>
+    </div> 
+    )
+    
 };
 

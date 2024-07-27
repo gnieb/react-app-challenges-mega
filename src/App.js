@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { StopWatch } from './components/StopWatch';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <StopWatch />
     </div>
   );
 }
