@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 // import { StopWatch } from './components/StopWatch';
-import 
+import { ContactForm1 } from './components/ContactForm1';
 
 
 function App() {
@@ -22,6 +22,7 @@ function App() {
         </a>
       </header>
       {/* <StopWatch /> */}
+      <ContactForm1 />
     </div>
   );
 }
