@@ -27,13 +27,19 @@ const handleSubmit = (e) => {
 
 
 
+
     return (
-        <div>
+        <div className="formComponent">
             <form
-            onSubmit={handleSubmit}>
-                <input type="text" onChange={handleFormData} />
-                <input type="text" onChange={handleFormData}/>
-                <input type="text" onChange={handleFormData}/>
+            onSubmit={handleSubmit} >
+                <div className="form1label">First Name</div>
+                <input type="text" onChange={handleFormData} name="first" />
+                <div className="form1label">Last Name</div>
+                <input type="text" onChange={handleFormData} name="last"/>
+                <div className="form1label">Email</div>
+                <input type="text" onChange={handleFormData} name="email"/>
+                <div className="form1label">Tell us a fun fact about you!</div>
+                <textarea type="text" onChange={handleFormData} name="funFact"/>
                 <input type="submit"/>
             </form>
         </div>

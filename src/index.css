@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.formComponent {
+  margin:30px;
+}
+
+input[type=text] {
+  width:100%;
+  border: 3px solid green;
+  margin:4px;
+  padding: 5px;
+  
+
+}
+
+textarea {
+  width:100%;
+  border: 3px solid green;
+  margin:4px;
+  padding: 5px;
+  
+
+}
+
+.form1label {
+  width:100%;
+  text-align: left;
+  font-weight: bold;
+}
