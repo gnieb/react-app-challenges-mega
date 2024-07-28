@@ -23,8 +23,15 @@ const handleFormData = (e) => {
 const handleSubmit = (e) => {
     e.preventDefault()
     console.log("submitted yay")
+    setFormData({
+        first: "",
+        last:"",
+        email:"",
+        funFact:""
+    })
 }
 
+console.log(formData)
 
 
 
@@ -33,13 +40,13 @@ const handleSubmit = (e) => {
             <form
             onSubmit={handleSubmit} >
                 <div className="form1label">First Name</div>
-                <input type="text" onChange={handleFormData} name="first" />
+                <input type="text" onChange={handleFormData} id="first" value={formData.first} />
                 <div className="form1label">Last Name</div>
-                <input type="text" onChange={handleFormData} name="last"/>
+                <input type="text" onChange={handleFormData} id="last" value={formData.last}/>
                 <div className="form1label">Email</div>
-                <input type="text" onChange={handleFormData} name="email"/>
+                <input type="text" onChange={handleFormData} id="email" value={formData.email}/>
                 <div className="form1label">Tell us a fun fact about you!</div>
-                <textarea type="text" onChange={handleFormData} name="funFact"/>
+                <textarea type="text" onChange={handleFormData} id="funFact" value={formData.funFact} />
                 <input type="submit"/>
             </form>
         </div>
