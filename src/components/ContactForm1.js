@@ -22,7 +22,45 @@ const handleFormData = (e) => {
 
 const handleSubmit = (e) => {
     e.preventDefault()
+
+    // const sendingThisData = {
+    //     first: formData.first,
+    //     last: formData.last,
+    //     email: formData.email,
+    //     funFact:formData.funFact
+    // }
+
+
+    // fetch('https//:URLetcetc', {
+    //     method: "POST",
+    //     headers: {"Content-Type":"application/json"},
+    //     body:JSON.stringify(sendingThisData)
+    // })
+    // .then(r => {
+    //     if(r.ok) {
+    //         r.json().then((r => {
+    //             console.log(r)
+
+    //             console.log("submitted yay")
+    //             setFormData({
+    //                 first: "",
+    //                 last:"",
+    //                 email:"",
+    //                 funFact:""
+    //             })
+
+    //         }))
+    //     }
+    // })
+
+
+
+
     console.log("submitted yay")
+
+
+
+
     setFormData({
         first: "",
         last:"",
