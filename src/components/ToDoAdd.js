@@ -1,9 +1,9 @@
 // a form using formik
 
-import { useState } from "react";
+// import { useState } from "react";
 import { Formik } from 'formik';
 
-export const ToDoAdd = () => {
+export const ToDoAdd = ({todos, setTodos}) => {
 
     const initialVals = {
         todo: ""
@@ -15,22 +15,31 @@ export const ToDoAdd = () => {
      <h1>Anywhere in your app!</h1>
      <Formik
        initialValues={initialVals}
-       validate={values => {
-         const errors = {};
-         if (!values.email) {
-           errors.email = 'Required';
-         } else if (
-           !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-         ) {
-           errors.email = 'Invalid email address';
-         }
-         return errors;
-       }}
+    //    validate={values => {
+    //      const errors = {};
+    //      if (!values.email) {
+    //        errors.email = 'Required';
+    //      } else if (
+    //        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+    //      ) {
+    //        errors.email = 'Invalid email address';
+    //      }
+    //      return errors;
+    //    }}
        onSubmit={(values, { setSubmitting }) => {
          setTimeout(() => {
            alert(JSON.stringify(values, null, 2));
            setSubmitting(false);
          }, 400);
+
+        const newToDo = values.todo
+
+        setTodos(todos => [...todos, newToDo])
+
+        console.timeLog(todos)
+
+        values.todo = ""
+
        }}
      >
        {({
@@ -45,21 +54,14 @@ export const ToDoAdd = () => {
        }) => (
          <form onSubmit={handleSubmit}>
            <input
-             type="email"
-             name="email"
+             type=""
+             name="todo"
              onChange={handleChange}
              onBlur={handleBlur}
-             value={values.email}
+             value={values.todo}
            />
-           {errors.email && touched.email && errors.email}
-           <input
-             type="password"
-             name="password"
-             onChange={handleChange}
-             onBlur={handleBlur}
-             value={values.password}
-           />
-           {errors.password && touched.password && errors.password}
+           {/* {errors.email && touched.email && errors.email} */}
+    
            <button type="submit" disabled={isSubmitting}>
              Submit
            </button>

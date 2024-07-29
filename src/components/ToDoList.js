@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ToDoItem } from "./ToDoItem";
+import { ToDoAdd } from "./ToDoAdd";
 
 export const ToDoList = () => {
     
@@ -9,11 +10,13 @@ export const ToDoList = () => {
     const displayList = todos.map((t,i) => {
         return (
         <ToDoItem key={i} td={t} />
+        
     )
     })
 
     return (
         <div>
+            <ToDoAdd todos={todos} setTodos={setTodos} />
             {displayList}
         </div>
     )
