@@ -6,6 +6,7 @@ export const ToDoItem = ({td}) => {
         <div>
             <div></div>
             <div>~ {td.toUpperCase()}</div>
+            
 
 
         </div>
