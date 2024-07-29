@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 // import { StopWatch } from './components/StopWatch';
 // import { ContactForm1 } from './components/ContactForm1';
+import { ToDoList } from './components/ToDoList';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       </header>
       {/* <StopWatch /> */}
       {/* <ContactForm1 /> */}
+      <ToDoList />
       
     </div>
   );
