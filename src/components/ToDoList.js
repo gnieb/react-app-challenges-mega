@@ -7,7 +7,9 @@ export const ToDoList = () => {
 
 
     const displayList = todos.map((t,i) => {
+        return (
         <ToDoItem key={i} td={t} />
+    )
     })
 
     return (

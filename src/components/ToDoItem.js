@@ -4,7 +4,8 @@ export const ToDoItem = ({td}) => {
 
     return(
         <div>
-            <div>{td.toUpperCase()}</div>
+            <div></div>
+            <div>~ {td.toUpperCase()}</div>
 
 
         </div>
