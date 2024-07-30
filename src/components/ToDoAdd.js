@@ -32,7 +32,9 @@ export const ToDoAdd = ({todos, setTodos}) => {
            setSubmitting(false);
          }, 400);
 
-        const newToDo = values.todo
+        const newToDo = {
+            todo: values.todo
+        }
 
         setTodos(todos => [...todos, newToDo])
 
@@ -59,6 +61,7 @@ export const ToDoAdd = ({todos, setTodos}) => {
              onChange={handleChange}
              onBlur={handleBlur}
              value={values.todo}
+             className="text-black"
            />
            {/* {errors.email && touched.email && errors.email} */}
     
