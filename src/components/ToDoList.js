@@ -4,15 +4,40 @@ import { ToDoAdd } from "./ToDoAdd";
 
 export const ToDoList = () => {
     
-    const [todos, setTodos] = useState(["resend letter to Jori", "study AWS Lambda", "write some unit tests"]);
+    const [todos, setTodos] = useState([
+        {
+            id: 1,
+            todo: "resend letter to Jori",
 
+        },
+        {
+            id: 2,
+            todo: "study AWS Lambda"
+        }, 
+        {
+            
+            id:3,
+            todo: "write some unit tests"
+        }
+    ]);
+
+
+
+    const handleRemove = (td) => {
+        const withoutRemovedTodo = todos.filter((t) => t.id !== td.id)
+        console.log(withoutRemovedTodo)
+
+        setTodos(withoutRemovedTodo)
+
+    }
 
     const displayList = todos.map((t,i) => {
-        return (
-        <ToDoItem key={i} td={t} />
-        
-    )
-    })
+            return (
+            <ToDoItem key={i} td={t} handleRemove={handleRemove} />
+            
+        )
+        })
+
 
     return (
         <div>
