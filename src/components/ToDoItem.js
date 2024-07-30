@@ -6,6 +6,8 @@ export const ToDoItem = ({td, handleRemove}) => {
         handleRemove(td)
     }
 
+    
+
 
     return(
 
@@ -13,6 +15,9 @@ export const ToDoItem = ({td, handleRemove}) => {
             
             <div className="px-2">~ {td.todo.toUpperCase()}</div>
             <div className="px-2 border-2 border-orange-800 rounded-full" 
+            onClick={() => console.log("editing ", td.todo)}
+            >EDIT</div>
+             <div className="px-2 border-2 border-orange-800 rounded-full" 
             onClick={handleDelete}
             >REMOVE</div>
 
